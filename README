@@ -1,0 +1,24 @@
+there are 4 .c files -
+parta.c (contains the basic shell)
+partb.c (contains the pipe (|) operator)
+partb2.c (contains &&)
+partc.c (contains > redirection (with &&))
+
+to run the .c files-
+$gcc parta.c
+$./a.out
+
+in order to exit the bash, type exit
+**IMPORTANT**
+for parts b1, b2 and c : 
+It is important to seperate everything by spaces , even "|" and "&&" because of the way
+parsiing is done in my implemenation
+example: 
+>ps -aux | grep bash
+will work
+but,
+>ps -aux|grep bash
+will not work 
+
+
+All basic functionalities are working but there is a known bug- exit sometimes doesn't work at once, I suspect it is because of garbage in buffer of previous command
